@@ -8,9 +8,19 @@ html {
   box-sizing: inherit;
 }
 
-body {
+$primary-color: rgb(103, 103, 103);
+$secondary-color: darkgray;
+$tertiary-color: lightgray;
+
+@mixin flex-column {
   display: flex;
   flex-direction: column;
+}
+
+body {
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   margin: 0;
   min-height: 100vh;
 }
@@ -19,7 +29,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  background-color: rgb(103, 103, 103);
+  background-color: $primary-color;
 
   ul {
     display: flex;
@@ -39,8 +49,9 @@ ul a:hover {
 }
 
 .h1__background {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   height: 350px;
   background: url(/img/welcome.jpg) center center no-repeat;
   background-size: cover;
@@ -58,18 +69,19 @@ ul a:hover {
     margin-bottom: 0.5rem;
   }
   h3 {
-    color: lightgray;
+    color: $tertiary-color;
     font-size: 2rem;
     font-weight: 1.5;
   }
 }
 
 .poster {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   justify-content: center;
   align-items: center;
-  background-color: lightgray;
+  background-color: $tertiary-color;
 }
 
 .poster__plot {
@@ -105,14 +117,16 @@ ul a:hover {
 }
 
 .poster__text {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   margin-left: 2rem;
 }
 
 .characters {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   height: 500px;
   background: url(/img/rey-standing.jpg) center center no-repeat;
   background-size: cover;
@@ -163,12 +177,13 @@ ul a:hover {
 }
 
 .ratings__main-container {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: lightgray;
+  background-color: $tertiary-color;
 }
 
 .ratings__main-container h2 {
@@ -186,8 +201,9 @@ ul a:hover {
 }
 
 .rating-bar {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   align-items: center;
 }
 
@@ -196,7 +212,7 @@ ul a:hover {
   width: 8rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  background-color: darkgray;
+  background-color: $secondary-color;
   top: -50px;
   left: -35px;
   display: block;
@@ -210,7 +226,7 @@ ul a:hover {
 
 .bar:hover {
   transform: scale(1.06);
-  background-color: rgb(103, 103, 103);
+  background-color: $primary-color;
 }
 
 .rating-bar p a {
@@ -237,12 +253,13 @@ ul a:hover {
 }
 
 .cast__main-text-container {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   align-items: center;
-  background-color: lightgray;
-  border-top: darkgray 1px solid;
-  border-bottom: darkgray 1px solid;
+  background-color: $tertiary-color;
+  border-top: $secondary-color 1px solid;
+  border-bottom: $secondary-color 1px solid;
   h2 {
     text-align: center;
   }
@@ -279,8 +296,9 @@ ul a:hover {
 }
 
 .cast__mark-hamill_text {
-  display: flex;
-  flex-direction: column;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -303,7 +321,6 @@ ul a:hover {
   display: block;
   z-index: 999;
   cursor: pointer;
-  box-shadow: 0 10px 0px -7px rgba(0, 0, 0, 0.4), 0 7px 5px -7px transparent;
 }
 
 .card:hover {
@@ -328,9 +345,10 @@ ul a:hover {
 }
 
 .gallery__main-container {
-  display: flex;
-  flex-direction: column;
-  background-color: lightgray;
+  //   display: flex;
+  //   flex-direction: column;
+  @include flex-column;
+  background-color: $tertiary-color;
   h2 {
     text-align: center;
   }
